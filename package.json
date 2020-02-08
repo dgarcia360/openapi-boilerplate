@@ -1,0 +1,23 @@
+{
+  "name": "openapi-boilerplate",
+  "version": "0.1.0",
+  "description": "Multi-file boilerplate for Open API Specification.",
+  "main": "index.js",
+  "scripts": {
+    "test": "swagger-cli validate _build/openapi3.yaml",
+    "build": "swagger-cli bundle src/openapi.yaml --outfile _build/openapi3.yaml --type yaml",
+    "postman": "openapi2postmanv2 -s src/openapi.yaml -o _build/postman.json -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgarcia360/openapi-boilerplate.git"
+  },
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/dgarcia360/openapi-boilerplate/issues"
+  },
+  "homepage": "https://github.com/dgarcia360/openapi-boilerplate#readme",
+  "dependencies": {
+    "openapi-to-postmanv2": "^0.1.0"
+  }
+}
