@@ -8,10 +8,10 @@ info:
 servers:
   - url: http://petstore.swagger.io/v1
 paths:
-  "$ref": "./paths/_index.yaml"
+  $ref: "./paths/_index.yaml"
 components:
   parameters:
-    "$ref": "./parameters/_index.yaml"
+    $ref: "./parameters/_index.yaml"
   schemas:
     $ref: "./schemas/_index.yaml"
   responses:
