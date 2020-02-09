@@ -41,7 +41,7 @@ If you want to enhance the boilerplate, please read [CONTRIBUTING.md](CONTRIBUTI
 
 ## License
 
-Copyright (c) 2019-present David Garcia ([@dgarcia360](https://davidgarcia.dev>)).
+Copyright (c) 2019-present David Garcia ([@dgarcia360](https://davidgarcia.dev)).
 
 This software includes code derived from 
 The Linux Foundation [OpenAPI-Specification examples](https://github.com/OAI/OpenAPI-Specification).
