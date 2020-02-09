@@ -1,0 +1,29 @@
+{
+    "item": [],
+    "event": [],
+    "variable": [
+        {
+            "id": "baseUrl",
+            "type": "string",
+            "value": "http://petstore.swagger.io/v1"
+        }
+    ],
+    "info": {
+        "_postman_id": "d8aa0706-d913-45c3-8b60-216636c8e0d3",
+        "name": "Swagger Petstore",
+        "version": {
+            "raw": "1.0.0",
+            "major": 1,
+            "minor": 0,
+            "patch": 0,
+            "prerelease": [],
+            "build": [],
+            "string": "1.0.0"
+        },
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "Multi-file boilerplate for OpenAPI Specification.",
+            "type": "text/plain"
+        }
+    }
+}
