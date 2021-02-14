@@ -5,13 +5,20 @@ info:
   description: Multi-file boilerplate for OpenAPI Specification.
   license:
     name: MIT
+  contact:
+    name: API Support
+    url: 'http://www.example.com/support'
+    email: support@example.com
 servers:
   - url: 'http://petstore.swagger.io/v1'
+tags:
+  - name: pets
 paths:
   /pets:
     get:
-      summary: List all pets
+      summary: List
       operationId: listPets
+      description: List all pets
       tags:
         - pets
       parameters:
@@ -31,8 +38,9 @@ paths:
         default:
           $ref: '#/components/responses/UnexpectedError'
     post:
-      summary: Create a pet
+      summary: Create
       operationId: createPets
+      description: Create a pet
       tags:
         - pets
       responses:
@@ -42,8 +50,9 @@ paths:
           $ref: '#/components/responses/UnexpectedError'
   '/pets/{petId}':
     get:
-      summary: Info for a specific pet
+      summary: Detail
       operationId: showPetById
+      description: Info for a specific pet
       tags:
         - pets
       parameters:
