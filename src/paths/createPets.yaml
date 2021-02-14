@@ -1,9 +1,0 @@
-summary: Create a pet
-operationId: createPets
-tags:
-- pets
-responses:
-    '201':
-        $ref : "../responses/NullResponse.yaml"
-    default:
-        $ref : "../responses/UnexpectedError.yaml"

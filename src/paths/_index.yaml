@@ -1,8 +1,0 @@
-/pets:
-  get:
-    $ref: "./listPets.yaml"
-  post:
-    $ref: "./createPets.yaml"
-/pets/{petId}:
-  get:
-    $ref: "./showPetById.yaml"
