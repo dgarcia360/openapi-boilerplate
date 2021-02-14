@@ -1,0 +1,110 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Swagger Petstore
+  description: Multi-file boilerplate for OpenAPI Specification.
+  license:
+    name: MIT
+servers:
+  - url: 'http://petstore.swagger.io/v1'
+paths:
+  /pets:
+    get:
+      summary: Create a pet
+      operationId: createPets
+      tags:
+        - pets
+      responses:
+        '201':
+          description: Null response
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    post:
+      summary: List all pets
+      operationId: listPets
+      tags:
+        - pets
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: A paged array of pets
+          headers:
+            x-next:
+              description: A link to the next page of responses
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - id
+                  - name
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                  name:
+                    type: string
+                  tag:
+                    type: string
+        default:
+          $ref: '#/paths/~1pets/get/responses/default'
+  '/pets/{petId}':
+    get:
+      summary: Info for a specific pet
+      operationId: showPetById
+      tags:
+        - pets
+      parameters:
+        - name: petId
+          in: path
+          required: true
+          description: The id of the pet to retrieve
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/paths/~1pets/post/responses/200/content/application~1json/schema'
+        default:
+          $ref: '#/paths/~1pets/get/responses/default'
+components:
+  parameters:
+    petId:
+      $ref: '#/paths/~1pets~1%7BpetId%7D/get/parameters/0'
+    limit:
+      $ref: '#/paths/~1pets/post/parameters/0'
+  schemas:
+    Pet:
+      $ref: '#/paths/~1pets/post/responses/200/content/application~1json/schema'
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+  responses:
+    UnexpectedError:
+      $ref: '#/paths/~1pets/get/responses/default'
+    NullResponse:
+      $ref: '#/paths/~1pets/get/responses/201'
