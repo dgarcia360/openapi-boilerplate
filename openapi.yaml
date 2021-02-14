@@ -10,32 +10,12 @@ servers:
 paths:
   /pets:
     get:
-      summary: Create a pet
-      operationId: createPets
-      tags:
-        - pets
-      responses:
-        '201':
-          description: Null response
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-    post:
       summary: List all pets
       operationId: listPets
       tags:
         - pets
       parameters:
-        - name: limit
-          in: query
-          description: How many items to return at one time (max 100)
-          required: false
-          schema:
-            type: integer
-            format: int32
+        - $ref: '#/components/parameters/limit'
       responses:
         '200':
           description: A paged array of pets
@@ -47,20 +27,19 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                required:
-                  - id
-                  - name
-                properties:
-                  id:
-                    type: integer
-                    format: int64
-                  name:
-                    type: string
-                  tag:
-                    type: string
+                $ref: '#/components/schemas/Pet'
         default:
-          $ref: '#/paths/~1pets/get/responses/default'
+          $ref: '#/components/responses/UnexpectedError'
+    post:
+      summary: Create a pet
+      operationId: createPets
+      tags:
+        - pets
+      responses:
+        '201':
+          $ref: '#/components/responses/NullResponse'
+        default:
+          $ref: '#/components/responses/UnexpectedError'
   '/pets/{petId}':
     get:
       summary: Info for a specific pet
@@ -68,30 +47,47 @@ paths:
       tags:
         - pets
       parameters:
-        - name: petId
-          in: path
-          required: true
-          description: The id of the pet to retrieve
-          schema:
-            type: string
+        - $ref: '#/components/parameters/petId'
       responses:
         '200':
           description: Expected response to a valid request
           content:
             application/json:
               schema:
-                $ref: '#/paths/~1pets/post/responses/200/content/application~1json/schema'
+                $ref: '#/components/schemas/Pet'
         default:
-          $ref: '#/paths/~1pets/get/responses/default'
+          $ref: '#/components/responses/UnexpectedError'
 components:
   parameters:
     petId:
-      $ref: '#/paths/~1pets~1%7BpetId%7D/get/parameters/0'
+      name: petId
+      in: path
+      required: true
+      description: The id of the pet to retrieve
+      schema:
+        type: string
     limit:
-      $ref: '#/paths/~1pets/post/parameters/0'
+      name: limit
+      in: query
+      description: How many items to return at one time (max 100)
+      required: false
+      schema:
+        type: integer
+        format: int32
   schemas:
     Pet:
-      $ref: '#/paths/~1pets/post/responses/200/content/application~1json/schema'
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        tag:
+          type: string
     Error:
       type: object
       required:
@@ -105,6 +101,10 @@ components:
           type: string
   responses:
     UnexpectedError:
-      $ref: '#/paths/~1pets/get/responses/default'
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
     NullResponse:
-      $ref: '#/paths/~1pets/get/responses/201'
+      description: Null response
