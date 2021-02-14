@@ -5,8 +5,14 @@ info:
   description: Multi-file boilerplate for OpenAPI Specification.
   license:
     name: MIT
+  contact:
+    name: API Support
+    url: http://www.example.com/support
+    email: support@example.com
 servers:
   - url: http://petstore.swagger.io/v1
+tags:
+  - name: pets
 paths:
   /pets:
     $ref: "./resources/pets.yaml"

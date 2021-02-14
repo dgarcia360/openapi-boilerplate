@@ -1,6 +1,7 @@
 get:
-  summary: Info for a specific pet
+  summary: Detail
   operationId: showPetById
+  description: Info for a specific pet
   tags:
     - pets
   parameters:

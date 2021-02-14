@@ -1,6 +1,7 @@
 get:
-  summary: List all pets
+  summary: List
   operationId: listPets
+  description: List all pets
   tags:
   - pets
   parameters:
@@ -20,8 +21,9 @@ get:
     default:
       $ref: "../responses/UnexpectedError.yaml"
 post:
-  summary: Create a pet
+  summary: Create
   operationId: createPets
+  description: Create a pet
   tags:
   - pets
   responses:

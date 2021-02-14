@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "swagger-cli bundle src/openapi.yaml --outfile _build/openapi.yaml --type yaml",
-    "test": "npm run build && swagger-cli validate _build/openapi.yaml",
+    "test": "npm run build && spectral lint _build/openapi.yaml",
     "preview": "npm run build && redoc-cli serve _build/openapi.yaml --options.onlyRequiredInSamples",
     "html": "npm run build && redoc-cli bundle _build/openapi.yaml  --output _build/index.html --options.onlyRequiredInSamples",
-    "postman": "openapi2postmanv2 -s src/openapi.yaml -o _build/postman.json -p",
     "clean": "rm -r _build",
     "deploy": "./ci/deploy.sh"
   },
@@ -23,7 +22,7 @@
   "homepage": "https://github.com/dgarcia360/openapi-boilerplate#readme",
   "dependencies": {
     "@apidevtools/swagger-cli": "^4.0.4",
-    "openapi-to-postmanv2": "^0.1.0",
+    "@stoplight/spectral": "^5.8.1",
     "redoc-cli": "^0.10.3"
   }
 }
