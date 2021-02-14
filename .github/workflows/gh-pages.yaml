@@ -1,0 +1,24 @@
+name: gh-pages
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  gh-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: Build
+        run: |
+          npm ci
+          npm run build
+          npm run postman
+          npm run html
+      - name: Deploy to GitHub Pages
+        run : npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

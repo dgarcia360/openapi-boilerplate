@@ -4,9 +4,13 @@
   "description": "Multi-file boilerplate for Open API Specification.",
   "main": "index.js",
   "scripts": {
-    "test": "swagger-cli validate _build/openapi3.yaml",
-    "build": "swagger-cli bundle src/openapi.yaml --outfile _build/openapi3.yaml --type yaml",
-    "postman": "openapi2postmanv2 -s src/openapi.yaml -o _build/postman.json -p"
+    "build": "swagger-cli bundle src/openapi.yaml --outfile _build/openapi.yaml --type yaml",
+    "test": "npm run build && swagger-cli validate _build/openapi.yaml",
+    "preview": "npm run build && redoc-cli serve _build/openapi.yaml --options.onlyRequiredInSamples",
+    "html": "npm run build && redoc-cli bundle _build/openapi.yaml  --output _build/index.html --options.onlyRequiredInSamples",
+    "postman": "openapi2postmanv2 -s src/openapi.yaml -o _build/postman.json -p",
+    "clean": "rm -r _build",
+    "deploy": "./ci/deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,8 @@
   },
   "homepage": "https://github.com/dgarcia360/openapi-boilerplate#readme",
   "dependencies": {
-    "openapi-to-postmanv2": "^0.1.0"
+    "@apidevtools/swagger-cli": "^4.0.4",
+    "openapi-to-postmanv2": "^0.1.0",
+    "redoc-cli": "^0.10.3"
   }
 }

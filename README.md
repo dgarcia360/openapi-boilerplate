@@ -20,19 +20,42 @@ Multi-file boilerplate for Open API Specification.
 
 ## Usage
 
-**Compile** the OpenAPI spec from multiple files to one.
+## Commands
 
-``npm run build``
+### Build
 
-**Test** if the generated OpenAPI spec is valid.
+The command bundles the spec as one ``.yaml`` file.
+The minified spec is stored in ``_build/openapi.yaml``.
 
-``npm test``
+```
+npm run build
+```
 
-**Export** the OpenAPI spec to Postman.
+### Preview
 
-``npm run postman``
+The command builds a docs site so that you can view the rendering on your local browser.
 
-**Preview** the OpenAPI spec by opening ``_build/index.yml`` in a new browser tab.
+```
+npm run preview
+```
+
+The server starts on http://127.0.0.1:8080
+
+### Postman
+
+The command converts the spec to Postman Collection v2.1.0.
+
+```
+npm run postman
+```
+
+### Test
+
+The command checks if the spec follows the OpenAPI 3.0 standard.
+
+```
+npm run test
+```
 
 ## Contributing
 
