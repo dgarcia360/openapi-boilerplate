@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/dgarcia360/openapi-boilerplate.git"
   },
-  "license": "Apache 2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dgarcia360/openapi-boilerplate/issues"
   },
