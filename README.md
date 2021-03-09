@@ -88,7 +88,6 @@ If you want to enhance the boilerplate, please read [CONTRIBUTING.md](CONTRIBUTI
 
 ## License
 
-Copyright (c) 2019-present David Garcia ([@dgarcia360](https://davidgarcia.dev)).
+Copyright (c) 2019-present David Garcia ([@dgarcia360](https://davidgarcia.dev)). Licensed under the [MIT License](LICENSE.md).
 
-This software includes code derived from 
-The Linux Foundation [OpenAPI-Specification examples](https://github.com/OAI/OpenAPI-Specification).
+The Pet Store example used is derived from [OAI/OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification), Copyright The Linux Foundation, Licensed under the [Apache License, Version 2.0](https://github.com/OAI/OpenAPI-Specification/blob/master/LICENSE).
