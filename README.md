@@ -90,4 +90,4 @@ If you want to enhance the boilerplate, please read [CONTRIBUTING.md](CONTRIBUTI
 
 Copyright (c) 2019-present David Garcia ([@dgarcia360](https://davidgarcia.dev)). Licensed under the [MIT License](LICENSE.md).
 
-The Pet Store example used is derived from [OAI/OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification), Copyright The Linux Foundation, Licensed under the [Apache License, Version 2.0](https://github.com/OAI/OpenAPI-Specification/blob/master/LICENSE).
+The Pet Store example used is derived from [OAI/OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml), Copyright The Linux Foundation, Licensed under the [Apache License, Version 2.0](https://github.com/OAI/OpenAPI-Specification/blob/master/LICENSE).
