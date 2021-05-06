@@ -5,19 +5,22 @@
 ![build](https://github.com/dgarcia360/openapi-boilerplate/workflows/build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A template for **OpenAPI Specification** projects.
+A starter template for **OpenAPI Specification** projects.
 
 This project breaks the [Swagger Petstore](https://petstore.swagger.io/) example from the official documentation into smaller files. It also adds some handy commands to build, lint, and preview the OpenAPI specification from the command-line.
 
-Either if you want to create a new OpenAPI document from scratch or you already have it defined, you can use this template as a guide to structuring your project.
-
 ## Features
 
-* **Multi-file Support**: Define the OpenAPI document in different files.
-* **Merge OpenAPI files**: Merge all the separate files into one with [swagger-cli](https://github.com/APIDevTools/swagger-cli)
-* **Specification Validation**: Validate and lint the OAS document with [spectral](https://github.com/stoplightio/spectral)
-* **Reference Documentation**: Generate API Reference documentation with [ReDoc](https://github.com/Redocly/redoc)
-* **GitHub Pages Support**: Publish the API Reference on [GitHub Pages](https://pages.github.com)
+* 📝 Write OpenAPI definitions in different files.
+* 🔀 Combine all files with [APIDevTools/swagger-cli](https://github.com/APIDevTools/swagger-cli).
+* ✅ Validate and lint the OAS document with [stoplight/spectral](https://github.com/stoplight/spectral)
+* ✨ Publish reference docs with  [redocly/redoc](https://github.com/Redocly/redoc) & GitHub pages
+
+## Why?
+
+I have defined several OpenAPI specifications recently. But, I always ended with large OpenAPI documents, which were a nightmare to maintain.
+
+So I made this opinionated starter template to define, test, and publish modular OpenAPI specifications. Either if you want to create a new OpenAPI document from scratch or you already have it defined, you can use this template to guide the organization of your project.
 
 ## Getting Started
 
