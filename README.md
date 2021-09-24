@@ -1,6 +1,10 @@
-![alt text](https://github.com/dgarcia360/openapi-boilerplate/blob/master/docs/header.png?raw=true)
+<h1 align="center">
+  <div style="display:inline-block;vertical-align: middle;">
+      <img src="docs/header.png"/>
+  </div>
+</h1>
 
-# OpenAPI Boilerplate
+# OpenAPI boilerplate
 
 ![build](https://github.com/dgarcia360/openapi-boilerplate/workflows/build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -26,7 +30,7 @@ For this reason, I explored how to split OpenAPI documents and described the pro
 
 By splitting a large OpenAPI spec into multiple files, your project becomes much more maintainable and the documentation journey enjoyable. In my case, I have also noticed that other developers are more willing to contribute and propose changes to the document when this is properly organized.
 
-## Getting Started
+## Getting started
 
 ### Requirements
 
@@ -36,19 +40,19 @@ By splitting a large OpenAPI spec into multiple files, your project becomes much
 
 1. Clone the repository.
 
-```
-git clone https://github.com/dgarcia360/openapi-boilerplate.git
-```
+    ```
+    git clone https://github.com/dgarcia360/openapi-boilerplate.git
+    ```
 
 2. Install the project dependencies.
 
-```
-npm install
-```
+    ```
+    npm install
+    ```
 
 3. Edit ```openapi.yaml``` to fit your API definition. If you are not familiar with the OpenAPI Specification, read first [Getting started with OAS](https://swagger.io/solutions/getting-started-with-oas/).
 
-## Useful Commands
+## Useful commands
 
 The project lets you build, lint, and preview the OpenAPI document from the terminal, with the following commands:
 
