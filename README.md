@@ -1,6 +1,6 @@
 <h1 align="center">
   <div style="display:inline-block;vertical-align: middle;">
-      <img src="docs/header.png"/>
+      <img src="docs/header.png" width="550"/>
   </div>
 </h1>
 
