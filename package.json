@@ -22,7 +22,7 @@
   "homepage": "https://github.com/dgarcia360/openapi-boilerplate#readme",
   "dependencies": {
     "@apidevtools/swagger-cli": "^4.0.4",
-    "@stoplight/spectral": "^5.8.1",
+    "@stoplight/spectral": "^6.1.0",
     "redoc-cli": "^0.10.3"
   }
 }
