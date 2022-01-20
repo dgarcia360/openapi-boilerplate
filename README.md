@@ -34,7 +34,7 @@ By splitting a large OpenAPI spec into multiple files, your project becomes much
 
 ### Requirements
 
-* Node.js 14 LTS
+* Node.js 16 (current)
 
 ### Installation
 
