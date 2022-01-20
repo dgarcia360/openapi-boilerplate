@@ -1,4 +1,4 @@
-name: build
+name: Publish OpenAPI to GitHub Pages
 
 on:
   push:
