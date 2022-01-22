@@ -89,7 +89,7 @@ Here's a preview of a site generated with this command: [Swagger Petstore Refere
 
 ## Ready-to-use workflows
 
-The project uses [GitHub Actions](https://github.com/features/actions) for Continous Integration (CI).
+The project uses [GitHub Actions](https://github.com/features/actions) for Continuous Integration (CI).
 
 On every new pull request, the OpenAPI document is linted with [spectral](https://github.com/stoplightio/spectral). If there are changes that introduce errors, the bot will highlight them replying to the pull request.
 
