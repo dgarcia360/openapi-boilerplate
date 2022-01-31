@@ -4,31 +4,31 @@
   </div>
 </h1>
 
-# OpenAPI boilerplate
-
 ![build](https://github.com/dgarcia360/openapi-boilerplate/workflows/build/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+# OpenAPI boilerplate
+
 A starter template for **OpenAPI Specification** (OAS) projects.
 
-This project breaks the [Swagger Petstore](https://petstore.swagger.io/) example from the official documentation into smaller files. It also adds handy commands to build, lint, and preview the OpenAPI document from the terminal.
+This project splits the [Swagger Petstore](https://petstore.swagger.io/) example from the official documentation into smaller files. It also adds handy commands to build, lint, and preview the OpenAPI document from the terminal.
 
-Either if you want to create a new OpenAPI document from scratch or you already have it defined, you can use this template to guide the organization of your project.
+You can use this template to guide the organization of your project. Either if you want to create a new OpenAPI document from scratch or if you already have it defined. 
 
 ## Features
 
 * 📝 Write OpenAPI definitions in different files.
 * 🔀 Combine all files with [APIDevTools/swagger-cli](https://github.com/APIDevTools/swagger-cli).
 * ✅ Validate and lint the OpenAPI document with [stoplight/spectral](https://github.com/stoplight/spectral).
-* ✨ Publish reference docs with  [redocly/redoc](https://github.com/Redocly/redoc) & GitHub Pages.
+* ✨ Publish reference docs with [redocly/redoc](https://github.com/Redocly/redoc) & GitHub Pages.
 
 ## Why?
 
-When documenting APIs following the OpenAPI spec, I always ended with documents of thousands of lines, which were a nightmare to maintain.
+When I used to document APIs following the OpenAPI spec, I always ended up with documents of thousands of lines, which were a nightmare to maintain.
 
-For this reason, I explored how to split OpenAPI documents and described the process in my [blog](https://davidgarcia.dev/posts/how-to-split-open-api-spec-into-multiple-files/). The result of the research was this opinionated template to define, test, and publish modular OpenAPI projects.
+For this reason, I explored how to split OpenAPI documents. Jump over to my [blog](https://davidgarcia.dev/posts/how-to-split-open-api-spec-into-multiple-files/) to learn more about the process . Based on my research, I created this opinionated template to define, test, and publish modular OpenAPI projects.
 
-By splitting a large OpenAPI spec into multiple files, your project becomes much more maintainable and the documentation journey enjoyable. In my case, I have also noticed that other developers are more willing to contribute and propose changes to the document when this is properly organized.
+Properly organizing your project comes with great advantages. By splitting a large OpenAPI spec into multiple files, it will not only be much easier to handle.  Documenting it will be much more enjoyable, too. I also regularly get the feedback that other developers are more willing to contribute and propose changes to the document when it is properly organized.
 
 ## Getting started
 
@@ -50,11 +50,11 @@ By splitting a large OpenAPI spec into multiple files, your project becomes much
     npm install
     ```
 
-3. Edit ```openapi.yaml``` to fit your API definition. If you are not familiar with the OpenAPI Specification, read first [Getting started with OAS](https://swagger.io/solutions/getting-started-with-oas/).
+3. Edit ```openapi.yaml``` to fit your API definition. If you’re not familiar with the OpenAPI Specification, read [Getting started with OAS](https://swagger.io/solutions/getting-started-with-oas/) first.
 
 ## Useful commands
 
-The project lets you build, lint, and preview the OpenAPI document from the terminal, with the following commands:
+The project will build, lint, and preview the OpenAPI document from the terminal, with the following commands:
 
 ### Build
 
@@ -107,3 +107,5 @@ If you want to enhance the boilerplate, please read [CONTRIBUTING.md](CONTRIBUTI
 Copyright (c) 2019-present David Garcia ([@dgarcia360](https://davidgarcia.dev)). Licensed under the [MIT License](LICENSE.md).
 
 The PetStore example used is derived from [OAI/OpenAPI-Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/petstore.yaml), Copyright The Linux Foundation, Licensed under the [Apache License, Version 2.0](https://github.com/OAI/OpenAPI-Specification/blob/master/LICENSE).
+
+
