@@ -28,7 +28,7 @@ When I used to document APIs following the OpenAPI spec, I always ended up with 
 
 For this reason, I explored how to split OpenAPI documents. Jump over to my [blog](https://davidgarcia.dev/posts/how-to-split-open-api-spec-into-multiple-files/) to learn more about the process. Based on my research, I created this opinionated template to define, test, and publish modular OpenAPI projects.
 
-Properly organizing your project comes with great advantages. By splitting a large OpenAPI spec into multiple files, it will not only be much easier to handle.  Documenting it will be much more enjoyable, too. I also regularly get the feedback that other developers are more willing to contribute and propose changes to the document when it is properly organized.
+Properly organizing your project comes with great advantages. By splitting a large OpenAPI spec into multiple files, it will not only be much easier to handle. Documenting it will be much more enjoyable, too. I also regularly get the feedback that other developers are more willing to contribute and propose changes to the document when it is properly organized.
 
 ## Getting started
 
@@ -50,7 +50,7 @@ Properly organizing your project comes with great advantages. By splitting a lar
     npm install
     ```
 
-3. Edit ```openapi.yaml``` to fit your API definition. If you’re not familiar with the OpenAPI Specification, read [Getting started with OAS](https://swagger.io/solutions/getting-started-with-oas/) first.
+3. Edit `openapi.yaml` to fit your API definition. If you’re not familiar with the OpenAPI Specification, read [Getting started with OAS](https://swagger.io/solutions/getting-started-with-oas/) first.
 
 ## Useful commands
 
@@ -58,13 +58,13 @@ The project will build, lint, and preview the OpenAPI document from the terminal
 
 ### Build
 
-The command bundles the spec as one ``.yaml`` file.
+The command bundles the spec as one `.yaml` file.
 
 ```
 npm run build
 ```
 
-The minified document is stored in ``_build/openapi.yaml``.
+The minified document is stored in `_build/openapi.yaml`.
 
 ### Test
 
@@ -93,9 +93,9 @@ The project uses [GitHub Actions](https://github.com/features/actions) for Conti
 
 On every new pull request, the OpenAPI document is linted with [spectral](https://github.com/stoplightio/spectral). If there are changes that introduce errors, the bot will highlight them replying to the pull request.
 
-When the default branch (``master``) receives an update, a workflow automatically publishes the API reference documentation site to GitHub Pages.
+When the default branch (e.g. `master`) receives an update, a workflow automatically publishes the API reference documentation site to GitHub Pages.
 
-See ``.github/workflows`` to customize the available workflows. If you don't plan to use GitHub to host your spec or prefer to keep docs private, delete the ``.github`` folder.
+See `.github/workflows` to customize the available workflows. If you don't plan to use GitHub to host your spec or prefer to keep docs private, delete the `.github` folder.
 
 ## Contributing
 
