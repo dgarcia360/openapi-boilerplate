@@ -1,13 +1,13 @@
 {
   "name": "openapi-boilerplate",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Multi-file boilerplate for Open API Specification.",
   "main": "index.js",
   "scripts": {
-    "build": "swagger-cli bundle src/openapi.yaml --outfile _build/openapi.yaml --type yaml",
+    "build": "redocly bundle src/openapi.yaml --output _build/openapi.yaml",
     "test": "npm run build && spectral lint _build/openapi.yaml",
-    "preview": "npm run build && redoc-cli serve _build/openapi.yaml --options.onlyRequiredInSamples",
-    "html": "npm run build && redoc-cli bundle _build/openapi.yaml  --output _build/index.html --options.onlyRequiredInSamples",
+    "preview": "npm run build && redocly preview-docs _build/openapi.yaml",
+    "html": "npm run build && redocly build-docs _build/openapi.yaml --output _build/index.html",
     "clean": "rm -r _build",
     "deploy": "./ci/deploy.sh"
   },
@@ -21,8 +21,7 @@
   },
   "homepage": "https://github.com/dgarcia360/openapi-boilerplate#readme",
   "dependencies": {
-    "@apidevtools/swagger-cli": "^4.0.4",
-    "@stoplight/spectral": "^6.5.0",
-    "redoc-cli": "^0.13.20"
+    "@redocly/cli": "^1.0.2",
+    "@stoplight/spectral": "^6.5.0"
   }
 }
