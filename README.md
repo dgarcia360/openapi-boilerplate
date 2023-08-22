@@ -4,7 +4,7 @@
   </div>
 </h1>
 
-![build](https://github.com/dgarcia360/openapi-boilerplate/workflows/build/badge.svg)
+[![OpenAPI linter](https://github.com/dgarcia360/openapi-boilerplate/actions/workflows/linter.yaml/badge.svg)](https://github.com/dgarcia360/openapi-boilerplate/actions/workflows/linter.yaml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # OpenAPI boilerplate
