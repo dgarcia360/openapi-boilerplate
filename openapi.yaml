@@ -7,10 +7,10 @@ info:
     name: MIT
   contact:
     name: API Support
-    url: 'http://www.example.com/support'
+    url: http://www.example.com/support
     email: support@example.com
 servers:
-  - url: 'http://petstore.swagger.io/v1'
+  - url: http://petstore.swagger.io/v1
 tags:
   - name: pets
 paths:
@@ -48,7 +48,7 @@ paths:
           $ref: '#/components/responses/NullResponse'
         default:
           $ref: '#/components/responses/UnexpectedError'
-  '/pets/{petId}':
+  /pets/{petId}:
     get:
       summary: Detail
       operationId: showPetById
@@ -68,13 +68,6 @@ paths:
           $ref: '#/components/responses/UnexpectedError'
 components:
   parameters:
-    petId:
-      name: petId
-      in: path
-      required: true
-      description: The id of the pet to retrieve
-      schema:
-        type: string
     limit:
       name: limit
       in: query
@@ -83,7 +76,25 @@ components:
       schema:
         type: integer
         format: int32
+    petId:
+      name: petId
+      in: path
+      required: true
+      description: The id of the pet to retrieve
+      schema:
+        type: string
   schemas:
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
     Pet:
       type: object
       required:
@@ -96,17 +107,6 @@ components:
         name:
           type: string
         tag:
-          type: string
-    Error:
-      type: object
-      required:
-        - code
-        - message
-      properties:
-        code:
-          type: integer
-          format: int32
-        message:
           type: string
   responses:
     UnexpectedError:
