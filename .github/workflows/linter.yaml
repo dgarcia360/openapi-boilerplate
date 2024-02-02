@@ -13,7 +13,7 @@ jobs:
     name: Run Spectral
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: stoplightio/spectral-action@v0.8.11
         with:
           file_glob: 'openapi.yaml'
