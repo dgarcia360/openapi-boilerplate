@@ -19,7 +19,7 @@ You can use this template to guide the organization of your project. Either if y
 
 * 📝 Write OpenAPI definitions in different files.
 * 🔀 Combine all files with [redocly-cli](https://github.com/Redocly/redocly-cli).
-* ✅ Validate and lint the OpenAPI document with [stoplight/spectral](https://github.com/stoplight/spectral).
+* ✅ Validate and lint the OpenAPI document with [stoplightio/spectral](https://github.com/stoplightio/spectral).
 * ✨ Publish reference docs with [Redoc](https://github.com/Redocly/redoc) & GitHub Pages.
 
 ## Why?
