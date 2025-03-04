@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/dgarcia360/openapi-boilerplate#readme",
   "dependencies": {
-    "@redocly/cli": "^1.32.1",
+    "@redocly/cli": "^1.32.2",
     "@stoplight/spectral": "^6.5.0"
   }
 }
