@@ -20,7 +20,7 @@ You can use this template as a starting point, whether you are creating a new Op
 * 📝 Write OpenAPI definitions in different files.
 * 🔀 Combine all files with [redocly-cli](https://github.com/Redocly/redocly-cli).
 * ✅ Validate and lint the OpenAPI document with [Spectral](https://github.com/stoplightio/spectral).
-* ✨ Publish reference docs with [Redoc](https://github.com/Redocly/redoc) & GitHub Pages.
+* ✨ Publish reference docs with [Scalar](https://github.com/scalar/scalar) & GitHub Pages.
 
 ## Why?
 
@@ -84,7 +84,7 @@ npm run preview
 
 The server starts on http://localhost:3000.
 
-The site is generated with [Redoc](https://github.com/Redocly/redoc). Here's a preview: [Swagger Petstore Reference Documentation](https://dgarcia360.github.io/openapi-boilerplate/).
+The site is generated with [Scalar](https://github.com/scalar/scalar). Here's a preview: [Swagger Petstore Reference Documentation](https://dgarcia360.github.io/openapi-boilerplate/).
 
 ## Ready-to-use workflows
 
