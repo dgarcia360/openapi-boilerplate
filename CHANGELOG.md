@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.1 - 2026-03-20
+
+### Changed
+
+- Replaced `@redocly/cli` linter with `@stoplight/spectral-cli` for OpenAPI validation.
+- Updated README to reference Spectral as the linter.
+- Removed `_index.yaml` indirection files; components now referenced directly in `openapi.yaml`.
+- Disabled Scalar Agent (AI chat) and MCP in the API reference preview.
+
 ## 0.2.0 - 2026-03-20
 
 ### Changed

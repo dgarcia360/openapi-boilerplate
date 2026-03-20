@@ -21,8 +21,17 @@ paths:
     $ref: "./resources/pet.yaml"
 components:
   parameters:
-    $ref: "./parameters/_index.yaml"
+    petId:
+      $ref: "./parameters/path/petId.yaml"
+    limit:
+      $ref: "./parameters/query/limit.yaml"
   schemas:
-    $ref: "./schemas/_index.yaml"
+    Pet:
+      $ref: "./schemas/Pet.yaml"
+    Error:
+      $ref: "./schemas/Error.yaml"
   responses:
-    $ref: "./responses/_index.yaml"
+    UnexpectedError:
+      $ref: "./responses/UnexpectedError.yaml"
+    NullResponse:
+      $ref: "./responses/NullResponse.yaml"
