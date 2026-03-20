@@ -1,0 +1,3 @@
+apis:
+  petstore:
+    root: src/openapi.yaml

@@ -68,7 +68,7 @@ The bundled document is stored in `_build/openapi.yaml`.
 
 ### Test
 
-The command checks if the document follows the OpenAPI 3.0 Specification.
+The command checks if the document follows the OpenAPI 3.1 Specification.
 
 ```
 npm run test
@@ -82,10 +82,9 @@ The command builds a docs site so that you can view the rendering on your local 
 npm run preview
 ```
 
-The server starts on http://127.0.0.1:4000.
+The server starts on http://localhost:3000.
 
-The site is generated with [ReDoc](https://github.com/Redocly/redoc).
-Here's a preview of a site generated with this command: [Swagger Petstore Reference Documentation](https://dgarcia360.github.io/openapi-boilerplate/).
+The site is generated with [Redoc](https://github.com/Redocly/redoc). Here's a preview: [Swagger Petstore Reference Documentation](https://dgarcia360.github.io/openapi-boilerplate/).
 
 ## Ready-to-use workflows
 

@@ -1,15 +1,14 @@
 {
   "name": "openapi-boilerplate",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Multi-file boilerplate for Open API Specification.",
   "main": "index.js",
   "scripts": {
     "build": "redocly bundle src/openapi.yaml --output _build/openapi.yaml",
     "test": "npm run build && spectral lint _build/openapi.yaml",
-    "preview": "npm run build && redocly preview",
+    "preview": "npm run html && npx serve _build",
     "html": "npm run build && redocly build-docs _build/openapi.yaml --output _build/index.html",
-    "clean": "rm -r _build",
-    "deploy": "./ci/deploy.sh"
+    "clean": "rm -rf _build"
   },
   "repository": {
     "type": "git",

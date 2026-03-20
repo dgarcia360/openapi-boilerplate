@@ -5,20 +5,31 @@ on:
     branches: [master]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  gh-release:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6.3.0
         with:
           node-version: '20.x'
-      - name: Build
-        run: |
-          npm ci
-          npm run build
-          npm run html
-      - name: Deploy to GitHub Pages
-        run : npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npm ci
+      - run: npm run html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _build/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
