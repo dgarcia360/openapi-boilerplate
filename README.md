@@ -34,7 +34,7 @@ Organizing your project effectively offers significant benefits. Splitting a lar
 
 ### Requirements
 
-* Node.js 16 (current)
+* Node.js 18+
 
 ### Installation
 
