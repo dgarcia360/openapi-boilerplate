@@ -6,7 +6,7 @@
   "scripts": {
     "build": "redocly bundle src/openapi.yaml --output _build/openapi.yaml",
     "test": "npm run build && spectral lint _build/openapi.yaml",
-    "preview": "npm run build && redocly preview-docs _build/openapi.yaml",
+    "preview": "npm run build && redocly preview",
     "html": "npm run build && redocly build-docs _build/openapi.yaml --output _build/index.html",
     "clean": "rm -r _build",
     "deploy": "./ci/deploy.sh"

@@ -13,13 +13,13 @@ A starter template for **OpenAPI Specification** (OAS) projects.
 
 This project splits the [Swagger Petstore](https://petstore.swagger.io/) example from the official documentation into smaller files. It also adds handy commands to build, lint, and preview the OpenAPI document from the terminal.
 
-You can use this template to guide the organization of your project. Either if you want to create a new OpenAPI document from scratch or if you already have it defined. 
+You can use this template as a starting point, whether you are creating a new OpenAPI document from scratch or splitting an existing one into multiple files.
 
 ## Features
 
 * 📝 Write OpenAPI definitions in different files.
 * 🔀 Combine all files with [redocly-cli](https://github.com/Redocly/redocly-cli).
-* ✅ Validate and lint the OpenAPI document with [stoplightio/spectral](https://github.com/stoplightio/spectral).
+* ✅ Validate and lint the OpenAPI document with [Spectral](https://github.com/stoplightio/spectral-cli).
 * ✨ Publish reference docs with [Redoc](https://github.com/Redocly/redoc) & GitHub Pages.
 
 ## Why?
@@ -28,7 +28,7 @@ When I used to document APIs following the OpenAPI spec, I always ended up with 
 
 For this reason, I explored how to split OpenAPI documents. Jump over to my [blog](https://davidgarcia.dev/posts/how-to-split-open-api-spec-into-multiple-files/) to learn more about the process. Based on my research, I created this opinionated template to define, test, and publish modular OpenAPI projects.
 
-Organizing your project effectively offers significant benefits. Splitting a large OpenAPI spec into multiple files makes it easier to manage and maintain. It also makes the documentation process more efficient and less overwhelming. I've found that with this structure, other devs are more inclined to contribute and suggest changes to the documentation, as it feels more approachable and less intimidating.
+I've found that splitting a large spec into smaller files makes it easier to maintain and encourages other devs to contribute, as the structure feels more approachable.
 
 ## Getting started
 
@@ -50,7 +50,7 @@ Organizing your project effectively offers significant benefits. Splitting a lar
     npm install
     ```
 
-3. Edit `openapi.yaml` to fit your API definition. If you’re not familiar with the OpenAPI Specification, read [Getting started with OAS](https://swagger.io/solutions/getting-started-with-oas/) first.
+3. Edit the files under `src/` to fit your API definition. If you’re not familiar with the OpenAPI Specification, read [Getting started with OAS](https://swagger.io/solutions/getting-started-with-oas/) first.
 
 ## Useful commands
 
@@ -64,7 +64,7 @@ The command bundles the spec as one `.yaml` file.
 npm run build
 ```
 
-The minified document is stored in `_build/openapi.yaml`.
+The bundled document is stored in `_build/openapi.yaml`.
 
 ### Test
 
@@ -82,7 +82,7 @@ The command builds a docs site so that you can view the rendering on your local 
 npm run preview
 ```
 
-The server starts on http://127.0.0.1:8080.
+The server starts on http://127.0.0.1:4000.
 
 The site is generated with [ReDoc](https://github.com/Redocly/redoc).
 Here's a preview of a site generated with this command: [Swagger Petstore Reference Documentation](https://dgarcia360.github.io/openapi-boilerplate/).
@@ -91,9 +91,11 @@ Here's a preview of a site generated with this command: [Swagger Petstore Refere
 
 The project uses [GitHub Actions](https://github.com/features/actions) for Continuous Integration (CI).
 
-On every new pull request, the OpenAPI document is linted with [spectral](https://github.com/stoplightio/spectral). If there are changes that introduce errors, the bot will highlight them replying to the pull request.
+On every new pull request, the OpenAPI document is linted with [Spectral](https://github.com/stoplightio/spectral-cli). If there are changes that introduce errors, the bot will highlight them replying to the pull request.
 
-When the default branch (e.g. `master`) receives an update, a workflow automatically publishes the API reference documentation site to GitHub Pages.
+On every push to `master` and on pull requests, the build is tested against Node 18, 20, and 22.
+
+When the default branch (e.g. `master`) receives an update, a workflow automatically publishes the API reference documentation site to GitHub Pages. This workflow can also be triggered manually from the Actions tab.
 
 See `.github/workflows` to customize the available workflows. If you don't plan to use GitHub to host your spec or prefer to keep docs private, delete the `.github` folder.
 
