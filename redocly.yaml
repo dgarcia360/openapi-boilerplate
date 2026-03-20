@@ -1,3 +1,9 @@
+extends:
+  - recommended
+
+rules:
+  security-defined: off
+
 apis:
   petstore:
     root: src/openapi.yaml

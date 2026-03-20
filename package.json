@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "redocly bundle src/openapi.yaml --output _build/openapi.yaml",
-    "test": "npm run build && spectral lint _build/openapi.yaml",
+    "test": "redocly lint src/openapi.yaml",
     "preview": "npm run html && npx serve _build",
     "html": "npm run build && redocly build-docs _build/openapi.yaml --output _build/index.html",
     "clean": "rm -rf _build"
@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/dgarcia360/openapi-boilerplate#readme",
   "dependencies": {
-    "@redocly/cli": "^2.14.9",
-    "@stoplight/spectral-cli": "^6.15.0"
+    "@redocly/cli": "^2.14.9"
   }
 }

@@ -19,7 +19,7 @@ You can use this template as a starting point, whether you are creating a new Op
 
 * 📝 Write OpenAPI definitions in different files.
 * 🔀 Combine all files with [redocly-cli](https://github.com/Redocly/redocly-cli).
-* ✅ Validate and lint the OpenAPI document with [Spectral](https://github.com/stoplightio/spectral-cli).
+* ✅ Validate and lint the OpenAPI document with [redocly-cli](https://github.com/Redocly/redocly-cli).
 * ✨ Publish reference docs with [Redoc](https://github.com/Redocly/redoc) & GitHub Pages.
 
 ## Why?
@@ -90,7 +90,7 @@ The site is generated with [Redoc](https://github.com/Redocly/redoc). Here's a p
 
 The project uses [GitHub Actions](https://github.com/features/actions) for Continuous Integration (CI).
 
-On every new pull request, the OpenAPI document is linted with [Spectral](https://github.com/stoplightio/spectral-cli). If there are changes that introduce errors, the bot will highlight them replying to the pull request.
+On every new pull request, the OpenAPI document is linted with [redocly-cli](https://github.com/Redocly/redocly-cli). If there are changes that introduce errors, the workflow will fail and highlight them.
 
 On every push to `master` and on pull requests, the build is tested against Node 18, 20, and 22.
 
